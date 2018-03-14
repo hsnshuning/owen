@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>后台页面-搜索教师信息</title>
+	<link rel="stylesheet" href="__STATIC__/admin/css/bootstrap.min.css">
+	<link rel="stylesheet" href="__STATIC__/admin/css/bootstrap-theme.css">
+	<link rel="stylesheet" href="__STATIC__/admin/css/public.css">
+	<script src="__STATIC__/admin/js/jquery-3.2.1.min.js"></script>
+	<script src="__STATIC__/admin/js/bootstrap.min.js"></script>
+	<style>
+		
+	</style>
+</head>
+<body>
+	<!-- header -->
+	{include file="public/header"/}
+	<!-- /header -->
+	<div class="container-fluid" style="padding-left: 0;height: 100%;">
+	<!-- nav -->
+	{include file="public/nav"/}
+	<!-- /nav -->
+	<!-- content panel -->
+		<div class="col-md-10 " >
+				<h3 class="page-header">查询学生信息</h3>
+				<div>
+					<form action="{:url('admin/searchstudent/searchstudent')}" method="get">
+						请输入学生姓名：<input type="text" name="s_name">
+						<button type="submit" class="btn btn-info">查询</button>
+						<table border="1">
+							<thead>
+								<th>学生编号</th>
+								<th>学生姓名</th>
+								<th>家长姓名</th>
+								<th>联系电话</th>
+								<th>删除</th>
+								<th>修改</th>
+							</thead>
+							<tbody>
+								{volist name="res" id="vo"}
+								<tr>
+									<td name="s_id">{$vo.s_id}</td>
+									<td name="s_name">{$vo.s_name}</td>
+									<td name="s_parentname">{$vo.s_parentname}</td>
+									<td name="s_phone">{$vo.s_phone}</td>
+									<td name="s_delete"><a href="{:url('admin/deletestudent/deletestudent',array('s_id'=>$vo.s_id))}"
+										 onclick="return confirm('你确定删除该学生的信息吗？');">删除</a></td>
+									<td name="s_update">
+										<a href="{:url('admin/updatestudent/index',array('s_id'=>$vo.s_id))}">
+											修改	
+										</a>
+									</td>
+								</tr>
+								{/volist}
+							</tbody>
+						</table>
+					</form>
+				</div>
+
+			</div>
+	<!-- /content panel -->
+	</div>
+
+</body>
+</html>

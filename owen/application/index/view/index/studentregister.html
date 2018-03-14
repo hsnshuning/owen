@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Owen欧文教育——学生注册</title>
+		<link rel="stylesheet" href="__STATIC__/index/css/bootstrap.min.css">
+		<link rel="stylesheet" href="__STATIC__/index/css/register.css">
+
+		<link rel="stylesheet" type="text/css" href="__STATIC__/index/css/public_css.css">
+		<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+		<link rel="stylesheet" href="__STATIC__/index/css/bootstrap-theme.min.css">
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="__STATIC__/index/js/jquery-3.2.1.min.js"></script>
+		<script src="__STATIC__/index/js/bootstrap.min.js"></script>
+		<!--验证-->
+		<script type="text/javascript" src="__STATIC__/index/js/myself_validate.js"></script>
+		<style>
+
+		</style>
+	</head>
+
+	<body>
+		<div class="container-fluid">
+			<!-- header -->
+			{include file="public/header"/}
+			<!-- /header -->
+			<!-- page header -->
+			<div class="container">
+				<h2 class="register-title">学生注册</h2>
+				<p class="register-title">*提示：注册需要填写正确真实姓名、身份证号。<br>只对本校学员提供服务</p>
+			</div>
+		</div>
+		<!-- /page header -->
+		<!-- register content -->
+		<div class="container">
+			<div class="row clearfix">
+				<div class="col-md-2"></div>
+				<div class="col-md-8 row clearfix">
+					<form action="{:url('index/index/addStudent')}" method="post">
+						{include file="public/register"/}
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- /register content -->
+		<!-- footer -->
+		{include file="public/footer"/}
+		<!-- /footer -->
+		</div>
+	</body>
+
+</html>

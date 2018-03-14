@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Owen欧文教育——学生登录</title>
+		<link rel="stylesheet" href="__STATIC__/index/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="__STATIC__/index/css/public_css.css">
+		<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+		<link rel="stylesheet" href="__STATIC__/index/css/bootstrap-theme.min.css">
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="__STATIC__/index/js/jquery-3.2.1.min.js"></script>
+		<script src="__STATIC__/index/js/bootstrap.min.js"></script>
+		<script>
+			function usernameFocus() {
+				var usernameNotice = document.getElementById("usernameNotice");
+				usernameNotice.innerHTML = "请输入4到16位英文或数字用户名"
+			}
+		</script>
+
+		<style>
+			.background {
+				background: #F2F2F2;
+				margin-top: 20px;
+			}
+			
+			.background table {
+				width: 457px;
+				height: 300px;
+				line-height: 50px;
+				border: 1px solid #BEBEBE;
+			}
+			
+			.first-td {
+				float: right;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container-fluid">
+			<!-- header -->
+			{include file="public/header"/}
+			<!-- /header -->
+			<!-- page header -->
+			<div class="container">
+				<div class="row clearfix">
+					<div class="col-md-6">
+						<h2 class="login-title">登录</h2>
+					</div>
+					<div class="col-md-5">
+						<div class="background">
+							<form action="{:url('index/LoginVerify/loginverify')}" method="post">
+								<table border="0">
+									<thead>
+										<tr>
+											<th style="width: 30%"></th>
+											<th style="width: 60%;padding-left: 60px;">
+												<h3>登录</h3></th>
+											<th style="width: 10%"></th>
+
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="first-td"> 请输入用户名：</td>
+											<td>
+												<div class="input-group">
+													<span class="input-group-addon "><span class="glyphicon glyphicon-user"></span></span>
+													<input type="text" name="username" id="username" class="form-control register-input" required="required">
+												</div>
+											</td>
+											<td>
+												<span class="text-info" id="usernameNotice"></span>
+											</td>
+										</tr>
+										<tr>
+											<td class="first-td">请输入密码：</td>
+											<td>
+												<div class="input-group">
+													<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+													<input type="password" name="password" id="password" class="form-control register-input" required="required">
+												</div>
+											</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td class="first-td">请选择登录类型：</td>
+											<td style="text-align: center;">
+												<input type="radio" name="type" value="student" checked="checked">学生
+												<input type="radio" name="type" value="teacher">老师
+												<input type="radio" name="type" value="admin">管理员
+
+											</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td class="first-td"></td>
+											<td style="padding-left: 150px;">
+												<button type="submit" class="btn btn-primary">登录</button>
+												<!--<a class="btn btn-primary" style="" >登录</a>-->
+												<div class="dropdown first-td">
+													<a class="btn btn-warning" data-toggle="dropdown">
+														注册<span class="caret"></span>
+													</a>
+													<ul class="dropdown-menu">
+														<li>
+															<a href="{:url('index/index/studentregister')}">学员注册</a>
+														</li>
+														<li>
+															<a href="{:url('index/index/teacherregister')}">教师注册</a>
+														</li>
+													</ul>
+												</div>
+											</td>
+											<td></td>
+										</tr>
+
+									</tbody>
+								</table>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- /page header -->
+
+			<!-- footer -->
+			{include file="public/footer"/}
+			<!-- /footer -->
+		</div>
+	</body>
+
+</html>

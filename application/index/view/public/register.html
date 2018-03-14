@@ -1,0 +1,102 @@
+<table class="register-table">
+	<thead>
+		<tr>
+			<th style="width: 40%" ></th>
+			<th style="width: 30%"></th>
+			<th style="width: 30%"></th>
+								
+		</tr>
+	</thead>
+	<tbody>
+							<tr>
+								<td class="first-td">
+									 <label class="hint-text text-primary" for="exampleInputPassword1">*请输入用户名：</label>
+								</td>
+								<td>
+									<input type="text" class="form-control register-input" id="username" name="username" placeholder="点击输入用户名" 
+									onfocus="usernameFocus()" onblur="usernameBlur(this.value)" />
+								</td>
+								<td>
+									 <span class="text-info" id="usernameNotice"></span>
+								</td>
+							
+							</tr>
+							<tr>
+								<td class="first-td">
+									<label class="hint-text text-primary" for="exampleInputPassword1" >*请输入密码：</label>
+								</td>
+								<td>
+									<input type="password" class="form-control register-input" id="password" name="password" placeholder="6-16位英文或数字"
+									onfocus="passwordFocus()" onblur="passwordBlur(this.value)" />
+								</td>
+								<td>
+									<span class="text-info" id="passwordNotice"></span>
+								</td>
+								
+							</tr>
+							<tr >
+								<td class="first-td">
+									<label class="hint-text text-primary" for="exampleInputPassword1">*请再次输入密码：</label>
+								</td>
+								<td>
+									<input type="password" class="form-control register-input" id="repassword" name="repassword" placeholder="6-16位英文或数字"
+									onfocus="repasswordFocus()" onblur="repasswordBlur(this.value)" />
+								</td>
+								<td>
+									<span class="text-info" id="repasswordNotice"></span>
+								</td>
+								
+							</tr>
+							<tr>
+								<td class="first-td">
+									<label class="hint-text text-primary" for="exampleInputPassword1">*请输入真实姓名：</label>
+								</td>
+								<td>
+									<input type="text" class="form-control register-input" id="realname" name="realname" placeholder="请输入真实姓名"
+									onfocus="realnameFocus()" onblur="realnameBlur(this.value)" />
+								</td>
+								<td>
+									<span class="text-info" id="realnameNotice"></span>
+								</td>
+								
+							</tr>
+							<tr>
+								<td class="first-td">
+									<label class="hint-text text-primary" for="exampleInputPassword1">*请输入身份证号：</label>
+								</td>
+								<td>
+									<input type="text" class="form-control register-input" id="idcard" name="idcard" 	placeholder="18位身份证号"
+									onfocus="idcardFocus()" onblur="idcardBlur(this.value)" />
+								</td>
+								<td>
+									<span class="text-info" id="idcardNotice"></span>
+								</td>
+								
+							</tr>
+							<tr>
+								<td class="first-td">
+									<label class="hint-text text-primary" for="exampleInputPassword1">*请输入手机号：</label>
+								</td>
+								<td>
+									<input type="text" class="form-control register-input" id="phone" name="phone" placeholder="11位手机号"
+									onfocus="phoneFocus()" onblur="phoneBlur(this.value)" />
+								</td>
+								<td>
+									<span class="text-info" id="phoneNotice"></span>
+								</td>
+							</tr>
+							
+							<tr>
+								<td class="first-td">
+									<label class="hint-text" for="exampleInputPassword1"></label>
+								</td>
+								<td style="text-align: center;">
+									<button type="submit" class="btn btn-info">注册</button>
+									<button type="button" class="btn btn-danger">重置</button>
+								</td>
+								<td>
+									
+								</td>
+							</tr>
+						</tbody>
+					</table>
